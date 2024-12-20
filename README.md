@@ -11,38 +11,38 @@
 
 ## Introduction
 
-`pass2csv` is a command line interface (CLI) for exporting passwords from `pass` ([the standard Unix password manager](https://www.passwordstore.org/)) into a CSV format compatible with [KeePass](https://keepass.info/) import functionality.
+`pass2csv` is a command-line interface (CLI) tool designed to export passwords from `pass` ([the standard Unix password manager](https://www.passwordstore.org/)) into a CSV format compatible with the [KeePass](https://keepass.info/) import functionality.
 
-## Usage básico
+## Basic Usage
 
-Possuindo dependência com o `pass` (❗), a execução do `pass2csv`é efetuada da seguinte forma:
+`pass2csv` relies on `pass` for its operation (❗). Follow the steps below to execute the script:
 
-1. 👉 Download o script a partir de:
+1. Download the script from the GitHub repository:
 ```bash
 git clone https://github.com/substationworm/pass2csv.git
 cd pass2csv
 ```
 
-2. 👉 Grant execution permission using the command:
+2. Grant execution permissions to the script using the following command:
 ```bash
 chmod +x pass2csv.sh
 ```
 
-3. 👉 Run the script in the terminal with:
+3. Run the script in the terminal:
 ```bash
 ./pass2csv.sh
 ```
 
-`pass2csv` possui as seguintes opções de linha de comando:
-- `-h`: Displays the help message.
-- `-o <file>`: Specifies the output file (default: passwordsCSV.csv).
-- `-f <fields>`: Excludes specific fields from the CSV. Available fields:
+The `pass2csv` tool offers command-line options to customize its behavior:
+- `-h`: Displays a help message detailing the available options and usage.
+- `-o <file>`: Specifies the output file name. If not specified, the default output file is `passwordsCSV.csv`.
+- `-f <fields>`: Excludes specific fields from the generated CSV file. The following fields are available for exclusion:
     - Title.
     - User.
     - Password.
     - URL.
     - Notes.
-- `-d <directory>`: Specifies the `.password-store` directory (default: `~/.password-store`).
+- `-d <directory>`: Specifies the directory containing the `.password-store`. The default directory is `~/.password-store`.
 
 ---
 
